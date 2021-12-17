@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the IJava package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IJava \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-17 09:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../../docs/display.md:1
+msgid "Display"
+msgstr ""
+
+#: ../../../docs/display.md:3
+msgid ""
+"One of the many great things about the Jupyter front ends is the support "
+"for [`display_data`](http://jupyter-"
+"client.readthedocs.io/en/stable/messaging.html#display-data). IJava "
+"interfaces with the [base kernel](https://github.com/SpencerPark/jupyter-"
+"jvm-basekernel)'s high level rendering API."
+msgstr ""
+
+#: ../../../docs/display.md:5
+msgid "Notebook functions"
+msgstr ""
+
+#: ../../../docs/display.md:7
+msgid ""
+"IJava injects 2 functions into the user space for displaying data: "
+"`display` and `render`. Most use cases should prefer the former but there"
+" is a necessary case for `render` that is outline below. In addition the "
+"`updateDisplay` function can be used to update a previously displayed "
+"object. All are defined in the runtime "
+"[Display](/src/main/java/io/github/spencerpark/ijava/runtime/Display.java)"
+" class."
+msgstr ""
+
+#: ../../../docs/display.md:9
+msgid ""
+"All display/render functions include a `text/plain` representation in "
+"their output. By default this is the `String.valueOf(Object)` value but "
+"it can be overridden."
+msgstr ""
+
+#: ../../../docs/display.md:11
+msgid "`String display(Object o)`"
+msgstr ""
+
+#: ../../../docs/display.md:13
+msgid ""
+"Display an object as it's **preferred** types. If you don't want a "
+"specific type it is best to let the object decide how it is best "
+"represented."
+msgstr ""
+
+#: ../../../docs/display.md:15 ../../../docs/display.md:21
+msgid ""
+"The object is rendered and published on the display stream. An id is "
+"returned which can be used to `updateDisplay` if desired."
+msgstr ""
+
+#: ../../../docs/display.md:17
+msgid "`String display(Object o, String... as)`"
+msgstr ""
+
+#: ../../../docs/display.md:19
+msgid ""
+"Display an object as the **requested** types. In this case the object "
+"attempts to be rendered as the desired mime types given in `as`. No "
+"promises though, if a type is unsupported it will simply not appear in "
+"the output."
+msgstr ""
+
+#: ../../../docs/display.md:23
+msgid ""
+"This is useful when a type has many potential representations but not all"
+" are preferred. For example a `CharSequence` has many representations but"
+" only the `text/plain` is preferred. To display it as executable "
+"javascript we can use the following:"
+msgstr ""
+
+#: ../../../docs/display.md:29
+msgid ""
+"Since there is the potential that some front ends don't support a given "
+"format many can be given and the front end chooses the best. For example,"
+" to display as html and markdown:"
+msgstr ""
+
+#: ../../../docs/display.md:35
+msgid ""
+"This will trigger a display message with values for `text/html`, "
+"`text/markdown`, and the implicit `text/plain`."
+msgstr ""
+
+#: ../../../docs/display.md:38
+msgid "`DisplayData render(Object o)`"
+msgstr ""
+
+#: ../../../docs/display.md:40
+msgid ""
+"Renders an object as it's **preferred** types and returns it's rendered "
+"format. Similar to `display(Object o)` but without publishing the result."
+msgstr ""
+
+#: ../../../docs/display.md:42
+msgid "`DisplayData render(Object o, String... as)`"
+msgstr ""
+
+#: ../../../docs/display.md:44
+msgid ""
+"Renders an object as the **requested** types and returns it's rendered "
+"format. Similar to `display(Object o, String... as)` but without "
+"publishing the result."
+msgstr ""
+
+#: ../../../docs/display.md:46
+msgid ""
+"When expressions are the last code unit in a cell they are rendered with "
+"the `render(Object o)` semantics. If this is not desired it can be "
+"hijacked by wrapping it in a call to this function."
+msgstr ""
+
+#: ../../../docs/display.md:54
+msgid ""
+"This will result in the `Out[_]` result to be the pretty `text/markdown` "
+"representation rather than the boring `text/plain` representation."
+msgstr ""
+
+#: ../../../docs/display.md:56
+msgid "`void updateDisplay(String id, Object o)`"
+msgstr ""
+
+#: ../../../docs/display.md:58
+msgid ""
+"Renders an object as it's **preferred** types and updates an existing "
+"display with the given id to contain the new rendered object. Similar to "
+"`display(Object o)` but updates an existing displayed object instead of "
+"appending a new one."
+msgstr ""
+
+#: ../../../docs/display.md:60
+msgid "`void updateDisplay(String id, Object o, String... as)`"
+msgstr ""
+
+#: ../../../docs/display.md:62
+msgid ""
+"Renders an object as it's **requested** types and updates an existing "
+"display with the given id to contain the new rendered object. Similar to "
+"`display(Object o, String... as)` but updates an existing displayed "
+"object instead of appending a new one."
+msgstr ""
+

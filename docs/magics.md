@@ -41,7 +41,7 @@ Things that are likely to become magics are kernel meta functions or functions t
 
 Add jars to the notebook classpath.
 
-###### Line magic
+#### Line magic
 
 *   **arguments**:
     *   _varargs_ list of simple glob paths to jars on the local file system. If a glob matches a directory all files in that directory will be added.
@@ -52,7 +52,7 @@ Add jars to the notebook classpath.
 
 Add entries to the notebook classpath.
 
-###### Line magic
+#### Line magic
 
 *   **arguments**:
     *   _varargs_ list of simple glob paths to entries on the local file system. This includes directories or jars.
@@ -63,7 +63,7 @@ Add entries to the notebook classpath.
 
 Add maven artifacts to the notebook classpath. All transitive dependencies are also added to the classpath. See also [addMavenRepo](#addmavenrepo).
 
-###### Line magic
+#### Line magic
 
 *   **aliases**: `addMavenDependency`, `maven`
 *   **arguments**:
@@ -75,7 +75,7 @@ Add maven artifacts to the notebook classpath. All transitive dependencies are a
 
 Add a maven repository to search for when using [addMavenDependencies](#addmavendependencies).
 
-###### Line magic
+#### Line magic
 
 *   **aliases**: `mavenRepo`
 *   **arguments**:
@@ -89,13 +89,13 @@ Load any dependencies specified in a POM. This **ignores** repositories added wi
 
 The cell magic is designed to make it very simple to copy and paste from any READMEs specifying maven POM fragments to use in depending on an artifact (including repositories other than central).
 
-###### Line magic
+#### Line magic
 
 *   **arguments**:
     *   path to local POM file
     *   _varargs_ list of scope types to filter the dependencies by. Defaults to `compile`, `runtime`, `system`, and `import` if not supplied.
 
-###### Cell magic
+#### Cell magic
 
 *   **arguments**:
     *   _varargs_ list of scope types to filter the dependencies by. Defaults to `compile`, `runtime`, `system`, and `import` if not supplied.

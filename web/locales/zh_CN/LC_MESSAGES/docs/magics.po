@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the IJava package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IJava \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-17 09:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../../docs/magics.md:1
+msgid "Magics"
+msgstr ""
+
+#: ../../../docs/magics.md:3
+msgid "Magics in IJava are very similar to those from IPython. There are:"
+msgstr ""
+
+#: ../../../docs/magics.md:5
+msgid "**Line magics**: which are inline function calls via a magic function."
+msgstr ""
+
+#: ../../../docs/magics.md:13
+msgid ""
+"**Cell magics**: which are entire cell function calls that use the body "
+"of the cell as a special argument."
+msgstr ""
+
+#: ../../../docs/magics.md:29
+msgid ""
+"The magics simply desugar to calls to `lineMagic` and `cellMagic` in case"
+" programmatic access is desired. These functions are in the notebook "
+"namespace and have the signatures below. Note the return type which "
+"allows for an implicit cast to what ever type is required but there is no"
+" safety in these checks."
+msgstr ""
+
+#: ../../../docs/magics.md:31
+msgid "`<T> T lineMagic(String name, java.util.List<String> args)`"
+msgstr ""
+
+#: ../../../docs/magics.md:32
+msgid "`<T> T cellMagic(String name, java.util.List<String> args, String body)`"
+msgstr ""
+
+#: ../../../docs/magics.md:34
+msgid "Magics provided by IJava"
+msgstr ""
+
+#: ../../../docs/magics.md:36
+msgid ""
+"Things that are likely to become magics are kernel meta functions or "
+"functions that operate on source code. Magics should only be used for "
+"things that only appear in a Jupyter-like context and only use string "
+"arguments. Other things (like `display` and `render`) should be provided "
+"as plain functions."
+msgstr ""
+
+#: ../../../docs/magics.md:40
+msgid "jars"
+msgstr ""
+
+#: ../../../docs/magics.md:42
+msgid "Add jars to the notebook classpath."
+msgstr ""
+
+#: ../../../docs/magics.md:44 ../../../docs/magics.md:55
+#: ../../../docs/magics.md:66 ../../../docs/magics.md:78
+#: ../../../docs/magics.md:92
+msgid "Line magic"
+msgstr ""
+
+#: ../../../docs/magics.md:46 ../../../docs/magics.md:57
+#: ../../../docs/magics.md:69 ../../../docs/magics.md:81
+#: ../../../docs/magics.md:94 ../../../docs/magics.md:100
+msgid "**arguments**:"
+msgstr ""
+
+#: ../../../docs/magics.md:47
+msgid ""
+"_varargs_ list of simple glob paths to jars on the local file system. If "
+"a glob matches a directory all files in that directory will be added."
+msgstr ""
+
+#: ../../../docs/magics.md:51
+msgid "classpath"
+msgstr ""
+
+#: ../../../docs/magics.md:53
+msgid "Add entries to the notebook classpath."
+msgstr ""
+
+#: ../../../docs/magics.md:58
+msgid ""
+"_varargs_ list of simple glob paths to entries on the local file system. "
+"This includes directories or jars."
+msgstr ""
+
+#: ../../../docs/magics.md:62
+msgid "addMavenDependencies"
+msgstr ""
+
+#: ../../../docs/magics.md:64
+msgid ""
+"Add maven artifacts to the notebook classpath. All transitive "
+"dependencies are also added to the classpath. See also "
+"[addMavenRepo](#addmavenrepo)."
+msgstr ""
+
+#: ../../../docs/magics.md:68
+msgid "**aliases**: `addMavenDependency`, `maven`"
+msgstr ""
+
+#: ../../../docs/magics.md:70
+msgid ""
+"_varargs_ list of dependency coordinates in the form "
+"`groupId:artifactId:[packagingType:[classifier]]:version`"
+msgstr ""
+
+#: ../../../docs/magics.md:74
+msgid "addMavenRepo"
+msgstr ""
+
+#: ../../../docs/magics.md:76
+msgid ""
+"Add a maven repository to search for when using "
+"[addMavenDependencies](#addmavendependencies)."
+msgstr ""
+
+#: ../../../docs/magics.md:80
+msgid "**aliases**: `mavenRepo`"
+msgstr ""
+
+#: ../../../docs/magics.md:82
+msgid "repository id"
+msgstr ""
+
+#: ../../../docs/magics.md:83
+msgid "repository url"
+msgstr ""
+
+#: ../../../docs/magics.md:86
+msgid "loadFromPOM"
+msgstr ""
+
+#: ../../../docs/magics.md:88
+msgid ""
+"Load any dependencies specified in a POM. This **ignores** repositories "
+"added with [addMavenRepo](#addmavenrepo) as the POM would likely specify "
+"it's own."
+msgstr ""
+
+#: ../../../docs/magics.md:90
+msgid ""
+"The cell magic is designed to make it very simple to copy and paste from "
+"any READMEs specifying maven POM fragments to use in depending on an "
+"artifact (including repositories other than central)."
+msgstr ""
+
+#: ../../../docs/magics.md:95
+msgid "path to local POM file"
+msgstr ""
+
+#: ../../../docs/magics.md:96 ../../../docs/magics.md:101
+msgid ""
+"_varargs_ list of scope types to filter the dependencies by. Defaults to "
+"`compile`, `runtime`, `system`, and `import` if not supplied."
+msgstr ""
+
+#: ../../../docs/magics.md:98
+msgid "Cell magic"
+msgstr ""
+
+#: ../../../docs/magics.md:102
+msgid "**body**: A _partial_ POM literal."
+msgstr ""
+
+#: ../../../docs/magics.md:105
+msgid ""
+"If the body is an xml `<project>` tag, then the body is used as a POM "
+"without being modified."
+msgstr ""
+
+#: ../../../docs/magics.md:107
+msgid ""
+"Otherwise, the magic attempts to build a POM based on the xml fragments "
+"it gets."
+msgstr ""
+
+#: ../../../docs/magics.md:109
+msgid ""
+"`<modelVersion>`, `<groupId>`, `<artifactId>`, and `<version>` are given "
+"default values if not supplied which there is no reason to supply other "
+"than if they happen to be what is copy-and-pasted."
+msgstr ""
+
+#: ../../../docs/magics.md:111
+msgid ""
+"All children of `<dependencies>` and `<repositories>` are collected "
+"**along with any loose `<dependency>` and `repository` tags**."
+msgstr ""
+
+#: ../../../docs/magics.md:113
+msgid ""
+"Ex: To add a dependency not in central simply add a valid `<repository>` "
+"and `<dependency>` and the magic will take care of putting it together "
+"into a POM."
+msgstr ""
+

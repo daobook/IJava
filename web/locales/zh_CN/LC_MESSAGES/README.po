@@ -1,0 +1,683 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the IJava package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IJava \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-17 09:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../../README.md:1
+msgid "IJava"
+msgstr ""
+
+#: ../../../README.md:3
+msgid ""
+"[![badge](https://img.shields.io/badge/launch-"
+"binder-E66581.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-binder/master) [![badge](https://img.shields.io/badge/launch-"
+"binder%20lab-"
+"579ACA.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-binder/master?urlpath=lab)"
+msgstr ""
+
+#: ../../../README.md:3 ../../../README.md:29
+msgid "badge"
+msgstr ""
+
+#: ../../../README.md:5
+msgid "![display-img](docs/img/display-img.png)"
+msgstr ""
+
+#: ../../../README.md:5 ../../../README.md:47
+msgid "display-img"
+msgstr ""
+
+#: ../../../README.md:7
+msgid ""
+"A [Jupyter](http://jupyter.org/) kernel for executing Java code. The "
+"kernel executes code via the new [JShell "
+"tool](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm). "
+"Some of the additional commands should be supported as needed via a "
+"syntax similar to the ipython magics."
+msgstr ""
+"一个用于执行 Java 代码的 [Jupyter](http://jupyter.org/) 内核。"
+"该内核通过新的 "
+"[JShell 工具](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm) 执行代码。"
+"一些额外的命令应该通过类似于 ipython 魔法的语法，根据需要支持。"
+
+#: ../../../README.md:9
+msgid ""
+"The kernel is fully functional. Check out the [list of "
+"features](#features) further down in the README. Any requests for new "
+"ones or prioritizing current requests are welcomed in the "
+"[issues](https://github.com/SpencerPark/IJava/issues) along with bug "
+"requests, installation help, or other questions."
+msgstr ""
+"内核是全功能的。"
+"请看 README 中的 [功能列表](#features)。"
+"任何对新功能的要求或对当前要求的优先考虑都欢迎在 [issues](https://github.com/SpencerPark/IJava/issues) "
+"中提出，同时还有错误请求、安装帮助或其他问题。"
+
+#: ../../../README.md:11
+msgid ""
+"If you are interested in building your own kernel that runs on the JVM "
+"check out the related project that this kernel is build on, [jupyter-jvm-"
+"basekernel](https://github.com/SpencerPark/jupyter-jvm-basekernel)."
+msgstr ""
+"如果你对构建自己的运行在 JVM 上的内核感兴趣，请查看这个内核所基于的相关项目，"
+"[jupyter-jvm-basekernel](https://github.com/SpencerPark/jupyter-jvm-basekernel)。"
+
+#: ../../../README.md:13
+msgid "Contents"
+msgstr "目录"
+
+#: ../../../README.md:15
+msgid "[Try online](#try-online)"
+msgstr ""
+
+#: ../../../README.md:16
+msgid "[Features](#features)"
+msgstr ""
+
+#: ../../../README.md:17
+msgid "[Requirements](#requirements)"
+msgstr ""
+
+#: ../../../README.md:18
+msgid "[Installing](#installing)"
+msgstr ""
+
+#: ../../../README.md:19
+msgid "[Install pre-build binary](#install-pre-built-binary)"
+msgstr ""
+
+#: ../../../README.md:20
+msgid "[Install from source](#install-from-source)"
+msgstr ""
+
+#: ../../../README.md:21
+msgid "[Configuring](#configuring)"
+msgstr ""
+
+#: ../../../README.md:22
+msgid "[List of options](#list-of-options)"
+msgstr ""
+
+#: ../../../README.md:23
+msgid "[Changing VM/compiler options](#changing-vmcompiler-options)"
+msgstr ""
+
+#: ../../../README.md:24
+msgid "[Configuring startup scripts](#configuring-startup-scripts)"
+msgstr ""
+
+#: ../../../README.md:25
+msgid "[Run](#run)"
+msgstr ""
+
+#: ../../../README.md:27
+msgid "Try Online"
+msgstr "在线试用"
+
+#: ../../../README.md:29
+msgid ""
+"Clicking on the [![badge](https://img.shields.io/badge/launch-"
+"binder-E66581.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-binder/master) [![badge](https://img.shields.io/badge/launch-"
+"binder%20lab-"
+"579ACA.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-binder/master?urlpath=lab) badges at the top (or right here) will "
+"spawn a jupyter server running this kernel. The binder base is the "
+"[ijava-binder project](https://github.com/SpencerPark/ijava-binder)."
+msgstr ""
+"点击顶部（或这里的右侧）的 [![badge](https://img.shields.io/badge/launch-"
+"binder-E66581.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-binder/master) [![badge](https://img.shields.io/badge/launch-"
+"binder%20lab-"
+"579ACA.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-binder/master?urlpath=lab) 徽章，将生成一个运行这个内核的 jupyter 服务器。"
+"binder 的基础是 [ijava-binder](https://github.com/SpencerPark/ijava-binder) 项目。"
+
+#: ../../../README.md:31
+msgid "Features"
+msgstr "功能"
+
+#: ../../../README.md:33
+msgid "Currently the kernel supports"
+msgstr "当前，内核支持"
+
+#: ../../../README.md:35
+msgid "Code execution. ![output](docs/img/output.png)"
+msgstr "代码执行。![output](docs/img/output.png)"
+
+#: ../../../README.md:35
+msgid "output"
+msgstr ""
+
+#: ../../../README.md:37
+msgid ""
+"Autocompletion (`TAB` in Jupyter notebook). "
+"![autocompletion](docs/img/autocompletion.png)"
+msgstr ""
+"自动补全 (`TAB` in Jupyter notebook). "
+"![autocompletion](docs/img/autocompletion.png)"
+
+#: ../../../README.md:37
+msgid "autocompletion"
+msgstr ""
+
+#: ../../../README.md:39
+msgid ""
+"Code inspection (`Shift-TAB` up to 4 times in Jupyter notebook). ![code-"
+"inspection](docs/img/code-inspection.png)"
+msgstr ""
+"代码检查（`Shift-TAB` 在 Jupyter 笔记本中最多可使用 4 次）。![code-"
+"inspection](docs/img/code-inspection.png)"
+
+#: ../../../README.md:39
+msgid "code-inspection"
+msgstr ""
+
+#: ../../../README.md:41
+msgid ""
+"Colored, friendly, error message displays. ![compilation-error](docs/img"
+"/compilation-error.png) ![incomplete-src-error](docs/img/incomplete-src-"
+"error.png) ![runtime-error](docs/img/runtime-error.png)"
+msgstr ""
+"彩色的、友好的、错误信息显示。 ![compilation-error](docs/img"
+"/compilation-error.png) ![incomplete-src-error](docs/img/incomplete-src-"
+"error.png) ![runtime-error](docs/img/runtime-error.png)"
+
+#: ../../../README.md:41
+msgid "compilation-error"
+msgstr ""
+
+#: ../../../README.md:41
+msgid "incomplete-src-error"
+msgstr ""
+
+#: ../../../README.md:41
+msgid "runtime-error"
+msgstr ""
+
+#: ../../../README.md:45
+msgid ""
+"Add maven dependencies at runtime (See also [magics.md](docs/magics.md) "
+"and [Try the example "
+"![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-"
+"binder/master?urlpath=lab/tree/home/jovyan/3rdPartyDependency.ipynb)). "
+"![maven-pom-dep](docs/img/maven-pom-dep.png)"
+msgstr ""
+"在运行时添加 maven 依赖项（参见 [magics.md](docs/magics.md) 和 [尝试示例"
+"![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-"
+"binder/master?urlpath=lab/tree/home/jovyan/3rdPartyDependency.ipynb)). "
+"![maven-pom-dep](docs/img/maven-pom-dep.png)"
+
+#: ../../../README.md:45 ../../../README.md:47
+msgid "Binder"
+msgstr ""
+
+#: ../../../README.md:45
+msgid "maven-pom-dep"
+msgstr ""
+
+#: ../../../README.md:47
+msgid ""
+"Display rich output (See also [display.md](docs/display.md) and [maven "
+"magic](docs/magics.md#addmavendependencies)). Chart library in the demo "
+"photo is [XChart](https://github.com/knowm/XChart) with the sample code "
+"taken from their README. ([Try the example "
+"![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-"
+"binder/master?urlpath=lab/tree/home/jovyan/3rdPartyDependency.ipynb)) "
+"![display-img](docs/img/display-img.png)"
+msgstr ""
+"显示丰富的输出（另见 [display.md](docs/display.md) 和 "
+"[maven magic](docs/magics.md#addmavendependencies)）。"
+"演示照片中的图表库是 [XChart](https://github.com/knowm/XChart)，示例代码取自其 README。"
+"([试试这个例子"
+"![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/SpencerPark"
+"/ijava-"
+"binder/master?urlpath=lab/tree/home/jovyan/3rdPartyDependency.ipynb)) "
+"![display-img](docs/img/display-img.png)"
+
+#: ../../../README.md:49
+msgid ""
+"`eval` function. (See also [kernel.md](docs/kernel.md)) **Note: the "
+"signature is `Object eval(String) throws Exception`.** This evaluates the"
+" expression (a cell) in the user scope and returns the actual evaluation "
+"result instead of a serialized one. ![eval](docs/img/eval.png)"
+msgstr ""
+"`eval` 函数。（参见[kernel.md](docs/kernel.md)）"
+"**注意：签名是 `Object eval(String) throws Exception`。**"
+"这是在用户范围内评估表达式（一个单元），并返回实际的评估结果，而不是一个序列化的结果。"
+"![eval](docs/img/eval.png)"
+
+#: ../../../README.md:49
+msgid "eval"
+msgstr ""
+
+#: ../../../README.md:51
+msgid "Configurable evaluation timeout ![timeout](docs/img/timeout.png)"
+msgstr "可配置的评估超时时间 ![timeout](docs/img/timeout.png)"
+
+#: ../../../README.md:51
+msgid "timeout"
+msgstr ""
+
+#: ../../../README.md:54
+msgid "Requirements"
+msgstr "需求"
+
+#: ../../../README.md:56
+msgid ""
+"[Java JDK >= "
+"9](http://www.oracle.com/technetwork/java/javase/downloads/index.html). "
+"**Not the JRE**. Java 12 is the current release and should be considered "
+"if selecting a version but if a java 9, 10, or 11 build is installed, "
+"everything _should_ still be working fine."
+msgstr ""
+"[Java JDK >= 9](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。"
+"**不是JRE**。Java 12 是当前的版本，如果选择一个版本，应该考虑到这一点，"
+"但如果安装了 java 9、10 或 11 的构建，一切应该仍然可以正常工作。"
+
+#: ../../../README.md:58
+msgid ""
+"Ensure that the `java` command is in the PATH and is using version 9. For"
+" example:"
+msgstr ""
+"确保 `java` 命令在 PATH 中，并且使用版本 9。例如："
+
+#: ../../../README.md:66
+msgid ""
+"Next ensure that `java` is in a location where the jdk was installed and "
+"not just the jre. Use the `java --list-modules` command to do this. The "
+"list should contain `jdk.jshell`."
+msgstr ""
+"接下来确保 `java` 在安装了 jdk 的位置，而不仅仅是 jre 的位置。"
+"使用 `java --list-modules` 命令来做到这一点。该列表应包含 `jdk.jshell`。"
+
+#: ../../../README.md:68
+msgid "On *nix `java --list-modules | grep \"jdk.jshell\"`"
+msgstr "*nix 是 `java --list-modules | grep \"jdk.jshell\"`"
+
+#: ../../../README.md:69
+msgid "On windows `java --list-modules | findstr \"jdk.jshell\"`"
+msgstr "windows 是 `java --list-modules | findstr \"jdk.jshell\"`"
+
+#: ../../../README.md:71
+msgid "Both should output `jdk.jshell@` followed by your java version."
+msgstr "两者都应该输出 `jdk.jshell@`，后面是你的 java 版本。"
+
+#: ../../../README.md:73
+msgid "If the kernel cannot start with an error along the lines of"
+msgstr "如果内核无法启动，出现如下错误"
+
+#: ../../../README.md:80
+msgid ""
+"then double check that `java` is referring to the command for the `jdk` "
+"and not the `jre`."
+msgstr ""
+"然后仔细检查 `java` 是指 `jdk` 的命令，而不是 `jre` 的命令。"
+
+#: ../../../README.md:82
+msgid "Some jupyter-like environment to use the kernel in."
+msgstr "一些类似于 jupyter 的环境来使用内核。"
+
+#: ../../../README.md:84
+msgid "A non-exhaustive list of options:"
+msgstr "一个非详尽的选项清单："
+
+#: ../../../README.md:86
+msgid "[Jupyter](http://jupyter.org/install)"
+msgstr ""
+
+#: ../../../README.md:87
+msgid "[JupyterLab](http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)"
+msgstr ""
+
+#: ../../../README.md:88
+msgid "[nteract](https://nteract.io/desktop)"
+msgstr ""
+
+#: ../../../README.md:90
+msgid "Installing"
+msgstr "安装"
+
+#: ../../../README.md:92
+msgid ""
+"After meeting the [requirements](#requirements), the kernel can be "
+"installed locally. Any time you wish to remove a kernel you may use "
+"`jupyter kernelspec remove java`. If you have installed the kernel to "
+"multiple directories, this command may need to be run multiple times as "
+"it might only remove 1 installation at a time."
+msgstr ""
+"在满足 [需求](#requirements) 之后，内核可以被安装在本地。"
+"任何时候你想移除内核，可以使用 `jupyter kernelspec remove java`。"
+"如果你将内核安装到多个目录，这个命令可能需要运行多次，因为它可能一次只删除 1 个安装。"
+
+#: ../../../README.md:94
+msgid "Install pre-built binary"
+msgstr "安装预建的二进制文件"
+
+#: ../../../README.md:96
+msgid ""
+"Get the latest _release_ of the software with no compilation needed. See "
+"[Install from source](#install-from-source) for building the the latest "
+"commit."
+msgstr ""
+"获得 最新的_ 版本的软件，不需要进行编译。"
+"参见 [从源码安装](#install-from-source) 来构建最新的提交。"
+
+#: ../../../README.md:98
+msgid ""
+"**Note:** if you have an old installation or a debug one from running "
+"`gradlew installKernel` it is suggested that it is first removed via "
+"`jupyter kernelspec remove java`."
+msgstr ""
+"**注意**：如果你有一个旧的安装或运行 `gradlew installKernel` 后的调试安装，"
+"建议先通过 `jupyter kernelspec remove java` 将其删除。"
+
+#: ../../../README.md:100
+msgid ""
+"Download the release from the [releases "
+"tab](https://github.com/SpencerPark/IJava/releases). A prepackaged "
+"distribution will be in an artifact named `ijava-$version.zip`."
+msgstr ""
+"从 [发布标签](https://github.com/SpencerPark/IJava/releases) 下载该版本。"
+"预包装的发行版将在一个名为 `ijava-$version.zip` 的工件中。"
+
+#: ../../../README.md:102
+msgid ""
+"Unzip it into a temporary location. It should have at least the "
+"`install.py` and `java` folder extracted in there."
+msgstr ""
+"将其解压缩到一个临时位置。它应该至少有 `install.py` 和 `java` 文件夹被解压在那里。"
+
+#: ../../../README.md:104
+msgid ""
+"Run the installer with the same python command used to install jupyter. "
+"The installer is a python script and has the same options as `jupyter "
+"kernelspec install` but additionally supports configuring some of the "
+"kernel properties mentioned further below in the README."
+msgstr ""
+"用安装 jupyter 时使用的相同的 python 命令运行安装程序。"
+"安装程序是一个 python 脚本，具有与 `jupyter kernelspec install` 相同的选项，"
+"但还支持配置下面 README 中进一步提到的一些内核属性。"
+
+#: ../../../README.md:114
+msgid ""
+"Check that it installed with `jupyter kernelspec list` which should "
+"contain `java`."
+msgstr ""
+"检查它是否安装了 `jupyter kernelspec list`，其中应该包含 `java`。"
+
+#: ../../../README.md:116
+msgid "Install from source"
+msgstr "从源码安装"
+
+#: ../../../README.md:118
+msgid ""
+"Get the latest version of the kernel but possibly run into some issues "
+"with installing. This is also the route to take if you wish to contribute"
+" to the kernel."
+msgstr ""
+"获得最新版本的内核，但在安装时可能会遇到一些问题。如果你想为内核做出贡献，这也是你要走的路线。"
+
+#: ../../../README.md:120
+msgid "Download the project."
+msgstr "下载项目"
+
+#: ../../../README.md:126
+msgid "Build and install the kernel."
+msgstr "构建和安装内核。"
+
+#: ../../../README.md:128
+msgid "On *nix `./gradlew installKernel`"
+msgstr "在 *nix 上 `./gradlew installKernel`"
+
+#: ../../../README.md:130
+msgid "On windows `gradlew installKernel`"
+msgstr "在 windows 上 `gradlew installKernel`"
+
+#: ../../../README.md:132
+msgid ""
+"See all available options for configuring the install path with `gradlew "
+"-q help --task installKernel`. Pass the `--default`, `--user`, `--sys-"
+"prefix`, `--prefix`, `--path`, or `--legacy` options to change the "
+"install location. Also use the `--param` flag (repeatedly) to set (or "
+"add) parameter values with the parameter names (not environment variable)"
+" specified in the configuration section below. For example `--param "
+"classpath:/my/classpath/root` to append to the classpath list."
+msgstr ""
+"使用 `gradlew -q help --task installKernel` 查看配置安装路径的所有可用选项。"
+"通过 `--default`、`--user`、`--sys-prefix`、`--prefix`、`--path` 或 `--legacy` 选项来改变安装位置。"
+"还可以使用 `--param` 旗标（重复）来设置（或添加）参数值，参数名称（不是环境变量）在下面的配置部分中指定。"
+"例如 `--param classpath:/my/classpath/root` 来追加到 classpath 列表中。"
+
+#: ../../../README.md:134
+msgid "Configuring"
+msgstr "配置"
+
+#: ../../../README.md:136
+msgid ""
+"Configuring the kernel can be done via environment variables. These can "
+"be set on the system or inside the `kernel.json`. The configuration can "
+"be done at install time, which may be repeated as often as desired. The "
+"parameters are listed with `python3 install.py -h` as well as below in "
+"the list of options. Configuration done via the installer (or `gradlew "
+"installKernel --param ...:...`) should use the names in the _Parameter "
+"name_ column."
+msgstr ""
+"配置内核可以通过环境变量来完成。"
+"这些变量可以在系统中设置，也可以在 `kernel.json` 中设置。"
+"配置可以在安装时完成，可以根据需要经常重复。这些参数在 `python3 install.py -h` 以及下面的选项列表中列出。"
+"通过安装程序（或 `gradlew installKernel --param ...:...`）进行的配置应该使用 _Parameter name_ 列中的名称。"
+
+#: ../../../README.md:138
+msgid "List of options"
+msgstr "选项清单"
+
+#: ../../../README.md
+msgid "Environment variable"
+msgstr ""
+
+#: ../../../README.md
+msgid "Parameter name"
+msgstr ""
+
+#: ../../../README.md
+msgid "Default"
+msgstr ""
+
+#: ../../../README.md
+msgid "Description"
+msgstr ""
+
+#: ../../../README.md
+msgid "`IJAVA_COMPILER_OPTS`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`comp-opts`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`\"\"`"
+msgstr ""
+
+#: ../../../README.md
+msgid ""
+"A space delimited list of command line options that would be passed to "
+"the `javac` command when compiling a project. For example `-parameters` "
+"to enable retaining parameter names for reflection."
+msgstr ""
+
+#: ../../../README.md
+msgid "`IJAVA_TIMEOUT`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`timeout`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`\"-1\"`"
+msgstr ""
+
+#: ../../../README.md
+msgid ""
+"A duration specifying a timeout (in milliseconds by default) for a "
+"_single top level statement_. If less than `1` then there is no timeout. "
+"If desired a time may be specified with a "
+"[`TimeUnit`](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/TimeUnit.html)"
+" may be given following the duration number (ex `\"30 SECONDS\"`)."
+msgstr ""
+
+#: ../../../README.md
+msgid "`IJAVA_CLASSPATH`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`classpath`"
+msgstr ""
+
+#: ../../../README.md
+msgid ""
+"A file path separator delimited list of classpath entries that should be "
+"available to the user code. **Important:** no matter what OS, this should"
+" use forward slash \"/\" as the file separator. Also each path may "
+"actually be a [simple glob](#simple-glob-syntax)."
+msgstr ""
+
+#: ../../../README.md
+msgid "`IJAVA_STARTUP_SCRIPTS_PATH`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`startup-scripts-path`"
+msgstr ""
+
+#: ../../../README.md
+msgid ""
+"A file path seperator delimited list of `.jshell` scripts to run on "
+"startup. This includes [ijava-jshell-init.jshell](src/main/resources"
+"/ijava-jshell-init.jshell) and [ijava-display-"
+"init.jshell](src/main/resources/ijava-display-init.jshell). "
+"**Important:** no matter what OS, this should use forward slash \"/\" as "
+"the file separator. Also each path may actually be a [simple glob"
+"](#simple-glob-syntax)."
+msgstr ""
+
+#: ../../../README.md
+msgid "`IJAVA_STARTUP_SCRIPT`"
+msgstr ""
+
+#: ../../../README.md
+msgid "`startup-script`"
+msgstr ""
+
+#: ../../../README.md
+msgid ""
+"A block of java code to run when the kernel starts up. This may be "
+"something like `import my.utils;` to setup some default imports or even "
+"`void sleep(long time) { try {Thread.sleep(time); } catch "
+"(InterruptedException e) { throw new RuntimeException(e); }}` to declare "
+"a default utility method to use in the notebook."
+msgstr ""
+
+#: ../../../README.md:148
+msgid "Simple glob syntax"
+msgstr ""
+
+#: ../../../README.md:150
+msgid ""
+"Options that support this glob syntax may reference a set of files with a"
+" single path-like string. Basic glob queries are supported including:"
+msgstr ""
+
+#: ../../../README.md:152
+msgid "`*` to match 0 or more characters up to the next path boundary `/`"
+msgstr ""
+
+#: ../../../README.md:153
+msgid "`?` to match a single character"
+msgstr ""
+
+#: ../../../README.md:154
+msgid ""
+"A path ending in `/` implicitly adds a `*` to match all files in the "
+"resolved directory"
+msgstr ""
+
+#: ../../../README.md:156
+msgid ""
+"Any relative paths are resolved from the notebook server's working "
+"directory. For example the glob `*.jar` will match all jars is the "
+"directory that the `jupyter notebook` command was run."
+msgstr ""
+
+#: ../../../README.md:158
+msgid "**Note:** users on any OS should use `/` as a path separator."
+msgstr ""
+
+#: ../../../README.md:160
+msgid "Changing VM/compiler options"
+msgstr ""
+
+#: ../../../README.md:162
+msgid ""
+"See the [List of options](#list-of-options) section for all of the "
+"configuration options."
+msgstr ""
+
+#: ../../../README.md:164
+msgid ""
+"To change compiler options use the `IJAVA_COMPILER_OPTS` environment "
+"variable (or `--comp-opts` parameter during installation) with a string "
+"of flags as if running the `javac` command."
+msgstr ""
+
+#: ../../../README.md:166
+msgid ""
+"The kernel VM parameters must currently be assigned in the `kernel.json` "
+"by adding/editing a JSON dictionary at the `env` key and changing the "
+"`argv` list. To find where the kernel is installed run"
+msgstr ""
+
+#: ../../../README.md:175
+msgid "and the `kernel.json` file will be in the given directory."
+msgstr ""
+
+#: ../../../README.md:177
+msgid "For example to enable assertions, set a limit on the heap size to `128m`."
+msgstr ""
+
+#: ../../../README.md:191
+msgid "Run"
+msgstr ""
+
+#: ../../../README.md:193
+msgid ""
+"This is where the documentation diverges, each environment has it's own "
+"way of selecting a kernel. To test from command line with Jupyter's "
+"console application run:"
+msgstr ""
+
+#: ../../../README.md:199
+msgid "Then at the prompt try:"
+msgstr ""
+
