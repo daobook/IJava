@@ -5,8 +5,8 @@
 
 README
 docs/kernel
-docs/display
 docs/magics
+docs/display
 ```
 
 # Indices and tables

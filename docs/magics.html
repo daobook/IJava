@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="Display" href="display.html" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="展示" href="display.html" /><link rel="prev" title="内核" href="kernel.html" />
 
     <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
-        <title>Magics - IJava 0.0.1 文档</title>
+        <title>魔法 - IJava 0.0.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
@@ -156,9 +156,9 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">IJava</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kernel.html">Kernel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="display.html">Display</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Magics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel.html">内核</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">魔法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="display.html">展示</a></li>
 </ul>
 
 </div>
@@ -186,17 +186,17 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="magics">
-<h1>Magics<a class="headerlink" href="#magics" title="永久链接至标题">¶</a></h1>
-<p>Magics in IJava are very similar to those from IPython. There are:</p>
+<h1>魔法<a class="headerlink" href="#magics" title="永久链接至标题">¶</a></h1>
+<p>IJava 中的魔法与 IPython 中的魔法非常相似。其中有：</p>
 <ul>
-<li><p><strong>Line magics</strong>: which are inline function calls via a magic function.</p>
+<li><p><strong>行魔法</strong>：这是通过一个魔法函数的内联函数调用。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>%mavenRepo oss-sonatype-snapshots https://oss.sonatype.org/content/repositories/snapshots/
 %maven io.github.spencerpark:jupyter-jvm-basekernel:2.0.0-SNAPSHOT
 List&lt;String&gt; addedJars = %jars C:/all/my/*.jar
 </pre></div>
 </div>
 </li>
-<li><p><strong>Cell magics</strong>: which are entire cell function calls that use the body of the cell as a special argument.</p>
+<li><p><strong>单元格魔法</strong>：这是整个单元格的函数调用，将单元格的主体作为一个特殊参数。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>%%loadFromPOM
 <span class="nt">&lt;repository&gt;</span>
   <span class="nt">&lt;id&gt;</span>oss-sonatype-snapshots<span class="nt">&lt;/id&gt;</span>
@@ -212,23 +212,23 @@ List&lt;String&gt; addedJars = %jars C:/all/my/*.jar
 </div>
 </li>
 </ul>
-<p>The magics simply desugar to calls to <code class="docutils literal notranslate"><span class="pre">lineMagic</span></code> and <code class="docutils literal notranslate"><span class="pre">cellMagic</span></code> in case programmatic access is desired. These functions are in the notebook namespace and have the signatures below. Note the return type which allows for an implicit cast to what ever type is required but there is no safety in these checks.</p>
+<p>在需要编程访问的情况下，这些魔法只是简单地解读为对 <code class="docutils literal notranslate"><span class="pre">lineMagic</span></code> 和 <code class="docutils literal notranslate"><span class="pre">cellMagic</span></code> 的调用。这些函数在笔记本命名空间中，其签名如下。请注意返回类型，它允许隐式转换为所需的任何类型，但这些检查并不安全。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span> <span class="pre">T</span> <span class="pre">lineMagic(String</span> <span class="pre">name,</span> <span class="pre">java.util.List&lt;String&gt;</span> <span class="pre">args)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span> <span class="pre">T</span> <span class="pre">cellMagic(String</span> <span class="pre">name,</span> <span class="pre">java.util.List&lt;String&gt;</span> <span class="pre">args,</span> <span class="pre">String</span> <span class="pre">body)</span></code></p></li>
 </ul>
 <section id="magics-provided-by-ijava">
-<h2>Magics provided by IJava<a class="headerlink" href="#magics-provided-by-ijava" title="永久链接至标题">¶</a></h2>
-<p>Things that are likely to become magics are kernel meta functions or functions that operate on source code. Magics should only be used for things that only appear in a Jupyter-like context and only use string arguments. Other things (like <code class="docutils literal notranslate"><span class="pre">display</span></code> and <code class="docutils literal notranslate"><span class="pre">render</span></code>) should be provided as plain functions.</p>
+<h2>IJava 提供的魔法<a class="headerlink" href="#magics-provided-by-ijava" title="永久链接至标题">¶</a></h2>
+<p>有可能成为魔法的东西是内核元函数或操作源代码的函数。魔法应该只用于只在类似 Jupyter 的环境中出现并且只使用字符串参数的东西。其他东西（如 <code class="docutils literal notranslate"><span class="pre">display</span></code> 和 <code class="docutils literal notranslate"><span class="pre">render</span></code>）应该作为普通函数提供。</p>
 <section id="jars">
 <h3>jars<a class="headerlink" href="#jars" title="永久链接至标题">¶</a></h3>
-<p>Add jars to the notebook classpath.</p>
+<p>在笔记本 classpath 中添加 jars。</p>
 <section id="line-magic">
 <h4>Line magic<a class="headerlink" href="#line-magic" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
 <li><p><strong>arguments</strong>:</p>
 <ul>
-<li><p><em>varargs</em> list of simple glob paths to jars on the local file system. If a glob matches a directory all files in that directory will be added.</p></li>
+<li><p><em>varargs</em> 列出了本地文件系统中 jars 的简单 glob 路径。如果 glob 匹配了一个目录，该目录中的所有文件都将被添加。</p></li>
 </ul>
 </li>
 </ul>
@@ -236,13 +236,13 @@ List&lt;String&gt; addedJars = %jars C:/all/my/*.jar
 </section>
 <section id="classpath">
 <h3>classpath<a class="headerlink" href="#classpath" title="永久链接至标题">¶</a></h3>
-<p>Add entries to the notebook classpath.</p>
+<p>向笔记本 classpath 添加条目。</p>
 <section id="id1">
 <h4>Line magic<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
 <li><p><strong>arguments</strong>:</p>
 <ul>
-<li><p><em>varargs</em> list of simple glob paths to entries on the local file system. This includes directories or jars.</p></li>
+<li><p><em>varargs</em> 列出了本地文件系统上的条目的简单 glob 路径。这包括目录或 jars。</p></li>
 </ul>
 </li>
 </ul>
@@ -250,14 +250,14 @@ List&lt;String&gt; addedJars = %jars C:/all/my/*.jar
 </section>
 <section id="addmavendependencies">
 <h3>addMavenDependencies<a class="headerlink" href="#addmavendependencies" title="永久链接至标题">¶</a></h3>
-<p>Add maven artifacts to the notebook classpath. All transitive dependencies are also added to the classpath. See also <a class="reference external" href="#addmavenrepo">addMavenRepo</a>.</p>
+<p>将 maven 工件添加到笔记本 classpath。所有横向依赖也被添加到 classpath 中。另见 <a class="reference external" href="#addmavenrepo">addMavenRepo</a>。</p>
 <section id="id2">
 <h4>Line magic<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
 <li><p><strong>aliases</strong>: <code class="docutils literal notranslate"><span class="pre">addMavenDependency</span></code>, <code class="docutils literal notranslate"><span class="pre">maven</span></code></p></li>
 <li><p><strong>arguments</strong>:</p>
 <ul>
-<li><p><em>varargs</em> list of dependency coordinates in the form <code class="docutils literal notranslate"><span class="pre">groupId:artifactId:[packagingType:[classifier]]:version</span></code></p></li>
+<li><p><em>varargs</em> 形式为 <code class="docutils literal notranslate"><span class="pre">groupId:artifactId:[packagingType:[classifier]]:version</span></code> 的依赖性坐标列表</p></li>
 </ul>
 </li>
 </ul>
@@ -265,7 +265,7 @@ List&lt;String&gt; addedJars = %jars C:/all/my/*.jar
 </section>
 <section id="addmavenrepo">
 <h3>addMavenRepo<a class="headerlink" href="#addmavenrepo" title="永久链接至标题">¶</a></h3>
-<p>Add a maven repository to search for when using <a class="reference external" href="#addmavendependencies">addMavenDependencies</a>.</p>
+<p>在使用 <a class="reference external" href="#addmavendependencies">addMavenDependencies</a> 时，添加一个要搜索的 maven 仓库。</p>
 <section id="id3">
 <h4>Line magic<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
@@ -281,34 +281,33 @@ List&lt;String&gt; addedJars = %jars C:/all/my/*.jar
 </section>
 <section id="loadfrompom">
 <h3>loadFromPOM<a class="headerlink" href="#loadfrompom" title="永久链接至标题">¶</a></h3>
-<p>Load any dependencies specified in a POM. This <strong>ignores</strong> repositories added with <a class="reference external" href="#addmavenrepo">addMavenRepo</a> as the POM would likely specify it’s own.</p>
-<p>The cell magic is designed to make it very simple to copy and paste from any READMEs specifying maven POM fragments to use in depending on an artifact (including repositories other than central).</p>
+<p>加载 POM 中指定的任何依赖性。这将忽略用 <a class="reference external" href="#addmavenrepo">addMavenRepo</a> 添加的资源库，因为 POM 可能会指定它自己的资源库。</p>
+<p>单元格魔法的设计是为了使其非常简单地从任何 README 中复制和粘贴指定的 maven POM 片段，以用于依赖一个工件（包括除中央仓库以外的仓库）。</p>
 <section id="id4">
 <h4>Line magic<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
 <li><p><strong>arguments</strong>:</p>
 <ul>
 <li><p>path to local POM file</p></li>
-<li><p><em>varargs</em> list of scope types to filter the dependencies by. Defaults to <code class="docutils literal notranslate"><span class="pre">compile</span></code>, <code class="docutils literal notranslate"><span class="pre">runtime</span></code>, <code class="docutils literal notranslate"><span class="pre">system</span></code>, and <code class="docutils literal notranslate"><span class="pre">import</span></code> if not supplied.</p></li>
+<li><p><em>varargs</em> 用来过滤依赖关系的作用域类型的列表。如果没有提供，则默认为 <code class="docutils literal notranslate"><span class="pre">compile</span></code>、<code class="docutils literal notranslate"><span class="pre">runtime</span></code>、<code class="docutils literal notranslate"><span class="pre">system</span></code> 和 <code class="docutils literal notranslate"><span class="pre">import</span></code>。</p></li>
 </ul>
 </li>
 </ul>
 </section>
 <section id="cell-magic">
-<h4>Cell magic<a class="headerlink" href="#cell-magic" title="永久链接至标题">¶</a></h4>
+<h4>单元格魔法<a class="headerlink" href="#cell-magic" title="永久链接至标题">¶</a></h4>
 <ul>
 <li><p><strong>arguments</strong>:</p>
 <ul class="simple">
-<li><p><em>varargs</em> list of scope types to filter the dependencies by. Defaults to <code class="docutils literal notranslate"><span class="pre">compile</span></code>, <code class="docutils literal notranslate"><span class="pre">runtime</span></code>, <code class="docutils literal notranslate"><span class="pre">system</span></code>, and <code class="docutils literal notranslate"><span class="pre">import</span></code> if not supplied.</p></li>
+<li><p><em>varargs</em> 用来过滤依赖关系的作用域类型的列表。如果没有提供，则默认为 <code class="docutils literal notranslate"><span class="pre">compile</span></code>、<code class="docutils literal notranslate"><span class="pre">runtime</span></code>、<code class="docutils literal notranslate"><span class="pre">system</span></code> 和 <code class="docutils literal notranslate"><span class="pre">import</span></code>。</p></li>
 </ul>
 </li>
-<li><p><strong>body</strong>:
-A <em>partial</em> POM literal.</p>
-<p>If the body is an xml <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code> tag, then the body is used as a POM without being modified.</p>
-<p>Otherwise, the magic attempts to build a POM based on the xml fragments it gets.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;modelVersion&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;groupId&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;artifactId&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;version&gt;</span></code> are given default values if not supplied which there is no reason to supply other than if they happen to be what is copy-and-pasted.</p>
-<p>All children of <code class="docutils literal notranslate"><span class="pre">&lt;dependencies&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;repositories&gt;</span></code> are collected <strong>along with any loose <code class="docutils literal notranslate"><span class="pre">&lt;dependency&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">repository</span></code> tags</strong>.</p>
-<p>Ex: To add a dependency not in central simply add a valid <code class="docutils literal notranslate"><span class="pre">&lt;repository&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;dependency&gt;</span></code> and the magic will take care of putting it together into a POM.</p>
+<li><p><strong>body</strong>：一个 <em>partial</em> POM 字面值。</p>
+<p>如果 body 是一个 xml <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code> 标签，那么主体就会作为 POM 使用，而不会被修改。</p>
+<p>否则，这个魔法会试图根据它得到的 xml 片段来建立一个 POM。</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;modelVersion&gt;</span></code>、<code class="docutils literal notranslate"><span class="pre">&lt;groupId&gt;</span></code>、<code class="docutils literal notranslate"><span class="pre">&lt;artifactId&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;version&gt;</span></code> 如果不提供，就给默认值，除了它们恰好是复制粘贴的内容外，没有理由提供。</p>
+<p>所有 <code class="docutils literal notranslate"><span class="pre">&lt;dependencies&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;repositories&gt;</span></code> 的子代都被收集起来，<strong>连同任何松散的 <code class="docutils literal notranslate"><span class="pre">&lt;dependency&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">repository</span></code> 标签</strong>。</p>
+<p>例如：要添加一个不在中央的依赖，只需添加一个有效的 <code class="docutils literal notranslate"><span class="pre">&lt;repository&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;dependency&gt;</span></code>，魔术师就会把它放到 POM 中。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>%%loadFromPOM
 <span class="nt">&lt;repository&gt;</span>
   <span class="nt">&lt;id&gt;</span>oss-sonatype-snapshots<span class="nt">&lt;/id&gt;</span>
@@ -334,15 +333,23 @@ A <em>partial</em> POM literal.</p>
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="display.html">
+          <a class="next-page" href="display.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">展示</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="kernel.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Display</div>
+                <div class="title">内核</div>
                 
               </div>
             </a>
@@ -372,8 +379,8 @@ A <em>partial</em> POM literal.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Magics</a><ul>
-<li><a class="reference internal" href="#magics-provided-by-ijava">Magics provided by IJava</a><ul>
+<li><a class="reference internal" href="#">魔法</a><ul>
+<li><a class="reference internal" href="#magics-provided-by-ijava">IJava 提供的魔法</a><ul>
 <li><a class="reference internal" href="#jars">jars</a><ul>
 <li><a class="reference internal" href="#line-magic">Line magic</a></li>
 </ul>
@@ -392,7 +399,7 @@ A <em>partial</em> POM literal.</p>
 </li>
 <li><a class="reference internal" href="#loadfrompom">loadFromPOM</a><ul>
 <li><a class="reference internal" href="#id4">Line magic</a></li>
-<li><a class="reference internal" href="#cell-magic">Cell magic</a></li>
+<li><a class="reference internal" href="#cell-magic">单元格魔法</a></li>
 </ul>
 </li>
 </ul>

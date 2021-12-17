@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="Display" href="display.html" /><link rel="prev" title="IJava" href="../README.html" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="魔法" href="magics.html" /><link rel="prev" title="IJava" href="../README.html" />
 
     <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
-        <title>Kernel - IJava 0.0.1 文档</title>
+        <title>内核 - IJava 0.0.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
@@ -156,9 +156,9 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">IJava</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Kernel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="display.html">Display</a></li>
-<li class="toctree-l1"><a class="reference internal" href="magics.html">Magics</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">内核</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magics.html">魔法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="display.html">展示</a></li>
 </ul>
 
 </div>
@@ -186,19 +186,19 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="kernel">
-<h1>Kernel<a class="headerlink" href="#kernel" title="永久链接至标题">¶</a></h1>
-<p>All code running in IJava flows through the kernel. This makes it the place to register magics, add things to the classpath, and perform many jupyter related operations.</p>
+<h1>内核<a class="headerlink" href="#kernel" title="永久链接至标题">¶</a></h1>
+<p>所有在 Java 中运行的代码都流经内核。这使得它成为注册魔法、向 classpath 添加东西以及执行许多与 jupyter 有关的操作的地方。</p>
 <section id="notebook-functions">
-<h2>Notebook functions<a class="headerlink" href="#notebook-functions" title="永久链接至标题">¶</a></h2>
-<p>IJava injects a function for getting the active kernel instance and additional helpers for making use of the kernel at runtime. These are defined in the runtime <span class="xref myst">Kernel</span> class.</p>
+<h2>Notebook 函数<a class="headerlink" href="#notebook-functions" title="永久链接至标题">¶</a></h2>
+<p>Java 注入了一个函数，用于获取活动的内核实例和额外的助手，以便在运行时使用内核。这些都是在运行时 <a class="reference download internal" download="" href="../_downloads/cacb914dd7930f01c0be2ae14e8b9c68/Kernel.java"><code class="xref download docutils literal notranslate"><span class="pre">Kernel</span></code></a> 类中定义的。</p>
 <section id="javakernel-getkernelinstance">
 <h3><code class="docutils literal notranslate"><span class="pre">JavaKernel</span> <span class="pre">getKernelInstance()</span></code><a class="headerlink" href="#javakernel-getkernelinstance" title="永久链接至标题">¶</a></h3>
-<p>Get a reference to the current kernel. It may return null if called outside of a kernel context but should be considered <code class="docutils literal notranslate"><span class="pre">@NonNull</span></code> when inside a notebook or similar. The kernel api has lots of goodies, look at the <span class="xref myst">JavaKernel</span> class for more information. Specifically there is access to adding to the classpath, getting the magics registry and maven resolver, and access to eval.</p>
+<p>获取当前内核的引用。如果在内核环境之外调用，可能会返回 null，但在笔记本或类似的环境中，应该被认为是 <code class="docutils literal notranslate"><span class="pre">@NonNull</span></code>。内核 api 有很多好东西，查看 <a class="reference download internal" download="" href="../_downloads/cacb914dd7930f01c0be2ae14e8b9c68/Kernel.java"><code class="xref download docutils literal notranslate"><span class="pre">JavaKernel</span></code></a> 类以了解更多信息。具体来说，可以访问添加到 classpath，获得 magics 注册表和 maven 解析器，以及访问评估。</p>
 </section>
 <section id="object-eval-string-expr-throws-exception">
 <h3><code class="docutils literal notranslate"><span class="pre">Object</span> <span class="pre">eval(String</span> <span class="pre">expr)</span> <span class="pre">throws</span> <span class="pre">Exception</span></code><a class="headerlink" href="#object-eval-string-expr-throws-exception" title="永久链接至标题">¶</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">eval</span></code> function provides full access to the code evaluation mechanism of the kernel. It evaluates the code in the <em>same</em> scope as the kernel and <strong>returns an object</strong>. This object is an object that lives in the kernel!</p>
-<p>The given expression can be anything you would write in a cell, including magics.</p>
+<p><code class="docutils literal notranslate"><span class="pre">eval</span></code> 函数提供了对内核代码评估机制的完全访问。它在与内核相同的范围内对代码进行评估，并 <strong>返回一个对象</strong>。这个对象是一个生活在内核中的对象！</p>
+<p>给定的表达式可以是你在单元格中写的任何东西，包括魔法。</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">eval</span><span class="p">(</span><span class="s">"1 + 2"</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
@@ -211,12 +211,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="display.html">
+          <a class="next-page" href="magics.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Display</div>
+                <div class="title">魔法</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -257,8 +257,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Kernel</a><ul>
-<li><a class="reference internal" href="#notebook-functions">Notebook functions</a><ul>
+<li><a class="reference internal" href="#">内核</a><ul>
+<li><a class="reference internal" href="#notebook-functions">Notebook 函数</a><ul>
 <li><a class="reference internal" href="#javakernel-getkernelinstance"><code class="docutils literal notranslate"><span class="pre">JavaKernel</span> <span class="pre">getKernelInstance()</span></code></a></li>
 <li><a class="reference internal" href="#object-eval-string-expr-throws-exception"><code class="docutils literal notranslate"><span class="pre">Object</span> <span class="pre">eval(String</span> <span class="pre">expr)</span> <span class="pre">throws</span> <span class="pre">Exception</span></code></a></li>
 </ul>
