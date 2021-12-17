@@ -1,16 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C)
 # This file is distributed under the same license as the IJava package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# xinetzone <735613050@qq.com>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: IJava \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 09:38+0800\n"
+"POT-Creation-Date: 2021-12-17 13:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: xinetzone <735613050@qq.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,27 +19,29 @@ msgstr ""
 
 #: ../../../docs/kernel.md:1
 msgid "Kernel"
-msgstr ""
+msgstr "内核"
 
 #: ../../../docs/kernel.md:3
 msgid ""
 "All code running in IJava flows through the kernel. This makes it the "
 "place to register magics, add things to the classpath, and perform many "
 "jupyter related operations."
-msgstr ""
+msgstr "所有在 Java 中运行的代码都流经内核。这使得它成为注册魔法、向 classpath 添加东西以及执行许多与 jupyter 有关的操作的地方。"
 
 #: ../../../docs/kernel.md:5
 msgid "Notebook functions"
-msgstr ""
+msgstr "Notebook 函数"
 
 #: ../../../docs/kernel.md:7
 msgid ""
 "IJava injects a function for getting the active kernel instance and "
 "additional helpers for making use of the kernel at runtime. These are "
-"defined in the runtime "
-"[Kernel](/src/main/java/io/github/spencerpark/ijava/runtime/Kernel.java) "
-"class."
+"defined in the runtime {download}`Kernel "
+"</src/main/java/io/github/spencerpark/ijava/runtime/Kernel.java>` class."
 msgstr ""
+"Java 注入了一个函数，用于获取活动的内核实例和额外的助手，以便在运行时使用内核。这些都是在运行时 "
+"{download}`Kernel </src/main/java/io/github/spencerpark/ijava/runtime/Kernel.java>` "
+"类中定义的。"
 
 #: ../../../docs/kernel.md:9
 msgid "`JavaKernel getKernelInstance()`"
@@ -50,12 +52,16 @@ msgid ""
 "Get a reference to the current kernel. It may return null if called "
 "outside of a kernel context but should be considered `@NonNull` when "
 "inside a notebook or similar. The kernel api has lots of goodies, look at"
-" the "
-"[JavaKernel](/src/main/java/io/github/spencerpark/ijava/runtime/Kernel.java)"
-" class for more information. Specifically there is access to adding to "
-"the classpath, getting the magics registry and maven resolver, and access"
-" to eval."
+" the {download}`JavaKernel "
+"</src/main/java/io/github/spencerpark/ijava/runtime/Kernel.java>` class "
+"for more information. Specifically there is access to adding to the "
+"classpath, getting the magics registry and maven resolver, and access to "
+"eval."
 msgstr ""
+"获取当前内核的引用。如果在内核环境之外调用，可能会返回 null，但在笔记本或类似的环境中，应该被认为是 `@NonNull`。内核 api "
+"有很多好东西，查看 {download}`JavaKernel"
+"</src/main/java/io/github/spencerpark/ijava/runtime/Kernel.java>`"
+" 类以了解更多信息。具体来说，可以访问添加到 classpath，获得 magics 注册表和 maven 解析器，以及访问评估。"
 
 #: ../../../docs/kernel.md:13
 msgid "`Object eval(String expr) throws Exception`"
@@ -68,10 +74,12 @@ msgid ""
 "and **returns an object**. This object is an object that lives in the "
 "kernel!"
 msgstr ""
+"`eval` 函数提供了对内核代码评估机制的完全访问。它在与内核相同的范围内对代码进行评估，并 "
+"**返回一个对象**。这个对象是一个生活在内核中的对象！"
 
 #: ../../../docs/kernel.md:17
 msgid ""
 "The given expression can be anything you would write in a cell, including"
 " magics."
-msgstr ""
+msgstr "给定的表达式可以是你在单元格中写的任何东西，包括魔法。"
 

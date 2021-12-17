@@ -1,16 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C)
 # This file is distributed under the same license as the IJava package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# xinetzone <735613050@qq.com>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: IJava \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 09:38+0800\n"
+"POT-Creation-Date: 2021-12-17 13:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: xinetzone <735613050@qq.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../docs/display.md:1
 msgid "Display"
-msgstr ""
+msgstr "展示"
 
 #: ../../../docs/display.md:3
 msgid ""
@@ -29,10 +29,13 @@ msgid ""
 "interfaces with the [base kernel](https://github.com/SpencerPark/jupyter-"
 "jvm-basekernel)'s high level rendering API."
 msgstr ""
+"Jupyter 前端的许多优点之一是对 "
+"[`display_data`](http://jupyter-client.readthedocs.io/en/stable/messaging.html#display-data) 的支持。"
+"IJava 与 [基础内核](https://github.com/SpencerPark/jupyter-jvm-basekernel) 的高级渲染 API 接口。"
 
 #: ../../../docs/display.md:5
 msgid "Notebook functions"
-msgstr ""
+msgstr "Notebook 函数"
 
 #: ../../../docs/display.md:7
 msgid ""
@@ -40,10 +43,13 @@ msgid ""
 "`display` and `render`. Most use cases should prefer the former but there"
 " is a necessary case for `render` that is outline below. In addition the "
 "`updateDisplay` function can be used to update a previously displayed "
-"object. All are defined in the runtime "
-"[Display](/src/main/java/io/github/spencerpark/ijava/runtime/Display.java)"
-" class."
+"object. All are defined in the runtime {download}`Display "
+"</src/main/java/io/github/spencerpark/ijava/runtime/Display.java>` class."
 msgstr ""
+"Java 在用户空间注入了 2 个函数，用于显示数据：`display` 和 `render`。"
+"大多数用例应该倾向于前者，但是 `render` 有一个必要的情况，下面将概述。"
+"此外，`updateDisplay` 函数可以用来更新一个先前显示的对象。"
+"所有这些都在运行时 {download}`Display </src/main/java/io/github/spencerpark/ijava/runtime/Display.java>` 类中定义。"
 
 #: ../../../docs/display.md:9
 msgid ""
@@ -51,6 +57,8 @@ msgid ""
 "their output. By default this is the `String.valueOf(Object)` value but "
 "it can be overridden."
 msgstr ""
+"所有的显示/渲染函数在它们的输出中包括一个 `text/plain` 表示。"
+"默认情况下，这是 `String.valueOf(Object)` 值，但它可以被重写。"
 
 #: ../../../docs/display.md:11
 msgid "`String display(Object o)`"
@@ -62,12 +70,15 @@ msgid ""
 "specific type it is best to let the object decide how it is best "
 "represented."
 msgstr ""
+"将一个对象显示为它的 **preferred** 类型。"
+"如果你不想要一个特定的类型，最好让对象决定它的最佳表现方式。"
 
 #: ../../../docs/display.md:15 ../../../docs/display.md:21
 msgid ""
 "The object is rendered and published on the display stream. An id is "
 "returned which can be used to `updateDisplay` if desired."
 msgstr ""
+"该对象被渲染并发布在显示流上。返回一个 ID，如果需要的话，可以用来 `updateDisplay`。"
 
 #: ../../../docs/display.md:17
 msgid "`String display(Object o, String... as)`"
@@ -80,6 +91,9 @@ msgid ""
 "promises though, if a type is unsupported it will simply not appear in "
 "the output."
 msgstr ""
+"显示一个对象为 **requested**  类型。"
+"在这种情况下，该对象试图被呈现为 `as` 中给出的所需的 mime 类型。"
+"但不保证，如果一个类型不被支持，它就不会出现在输出中。"
 
 #: ../../../docs/display.md:23
 msgid ""
@@ -88,6 +102,9 @@ msgid ""
 " only the `text/plain` is preferred. To display it as executable "
 "javascript we can use the following:"
 msgstr ""
+"当一个类型有许多潜在的表现形式，但不是所有的都是首选时，这很有用。"
+"例如，一个 `CharSequence` 有许多表现形式，但只有 `text/plain` 是首选。"
+"要把它显示为可执行的 javascript，我们可以使用以下方法："
 
 #: ../../../docs/display.md:29
 msgid ""
@@ -95,12 +112,15 @@ msgid ""
 "format many can be given and the front end chooses the best. For example,"
 " to display as html and markdown:"
 msgstr ""
+"因为有可能一些前端不支持给定的格式，所以可以给定很多，前端选择最好的。"
+"例如，要显示为 html 和 markdown："
 
 #: ../../../docs/display.md:35
 msgid ""
 "This will trigger a display message with values for `text/html`, "
 "`text/markdown`, and the implicit `text/plain`."
 msgstr ""
+"这将触发一个显示信息，其值为 `text/html`、`text/markdown` 和隐含的 `text/plain`。"
 
 #: ../../../docs/display.md:38
 msgid "`DisplayData render(Object o)`"
@@ -159,4 +179,3 @@ msgid ""
 "`display(Object o, String... as)` but updates an existing displayed "
 "object instead of appending a new one."
 msgstr ""
-
