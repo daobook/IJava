@@ -39,7 +39,7 @@ jobs:
         env:
           ijava-version: 1.3.0
         run: |
-          wget https://github.com/SpencerPark/IJava/releases/download/v${{ ijava-version }}/ijava-${{ ijava-version }}.zip
+          wget https://github.com/SpencerPark/IJava/releases/download/v${{ env.ijava-version }}/ijava-${{ env.ijava-version }}.zip
           unzip ijava-1.3.0.zip -d IJava
           cd IJava
           python3 install.py --sys-prefix
