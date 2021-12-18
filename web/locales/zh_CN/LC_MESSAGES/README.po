@@ -371,7 +371,7 @@ msgid ""
 "Get the latest _release_ of the software with no compilation needed. See "
 "[Install from source](#install-from-source) for building the the latest "
 "commit."
-msgstr "获得 最新的_ 版本的软件，不需要进行编译。参见 [从源码安装](#install-from-source) 来构建最新的提交。"
+msgstr "获得 最新的 版本的软件，不需要进行编译。参见 [从源码安装](#install-from-source) 来构建最新的提交。"
 
 #: ../../../README.md:98
 msgid ""
